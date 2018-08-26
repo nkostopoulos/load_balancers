@@ -1,0 +1,7 @@
+Pen open-source load balancer -> load balance dns service for 10.0.0.4 and 10.0.0.5
+
+sudo pen -dfrU -S 2 53 10.0.0.4:53 10.0.0.5:53 2>&1 | more
+
+enable transparent load balancing for ipv4 address only:
+
+sudo pen -df -O transparent 10.0.0.4:53 10.0.0.5:53
